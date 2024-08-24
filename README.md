@@ -2,9 +2,11 @@
 
 ![MEDGENIUS Explanation](MEdGenius.png)
 
+We Leveraged RAG(Retrieval Augmentation Generation) technology to search and implement clinical guidelines for real use.
+
 ## Target Users
 - **General Practitioners and Specialists at CHA Hospital**
-  - MEDGENIUS is designed primarily for general practitioners and specialists at CHA Hospital.
+  - MEDGENIUS is designed primarily for general practitioners and specialists at Primary Hospitals.
 
 ## Key Features
 - **Providing Medical Standards**
