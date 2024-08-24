@@ -1,29 +1,29 @@
-# **MEDGENIUS** : Feed Gigabytes of Clinical Guidelines for Accurate Medical Practice
+# 🏥**MEDGENIUS** : Feed Gigabytes of Clinical Guidelines for Accurate Medical Practice
 
-### - by SNUH Hackathon team 2
+### - by SNUH Hackathon 🚀team 2🚀
 
 ![MEDGENIUS Explanation](./logo/MEdGenius.png)
 
-We Leveraged RAG(Retrieval Augmentation Generation) technology to search and implement clinical guidelines for real use.
+We Leveraged **RAG(Retrieval Augmentation Generation) technology** to search and implement clinical guidelines for real use.
 # How to Set Up
 
-## 1. Create a Conda Virtual Environment
+## 🪴1. Create a Conda Virtual Environment
 
 ```bash
 conda create -n my_env python=3.12
 ```
 
-## 2. Activate the Virtual Environment
+## 🪴2. Activate the Virtual Environment
 ```bash
 conda activate my_env
 ```
 
-## 3. Clone the Git Repository
+## 🪴3. Clone the Git Repository
 ```bash
 git clone https://github.com/owenchokor/medgenius.git
 cd medgenius
 ```
-## 4. Download Requirements
+## 🪴4. Download Requirements
 ```bash
 pip install -r requirements.txt
 ```
