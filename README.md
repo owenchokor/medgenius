@@ -37,7 +37,7 @@ python script.py --bucket_name snuh-data-team2 --pdf_source download --preproces
 - pdf_source : You can either use your local pdf files(local) or files from the S3 bucket(download).
 - preprocess : We implemented tabular data and image preprocessing to feed in the RAG model. Pass --preprocess True to enable preprocessing, and False to use only plaintext.
   
-The diagram below shows out preprocessing scheme.
+The diagram below shows our preprocessing scheme.
 ![Preprocessing Scheme](./logo/preprocessing_scheme.png)
 
 ## Target Users
@@ -57,7 +57,14 @@ The diagram below shows out preprocessing scheme.
   - Allows for personalized care tailored to each patient's specific needs, rather than standardized, one-size-fits-all treatments.
 
 -----
-
+# Specific Implementation Details
+- **Tabular Data Embedding**
+  - Clinical guidelines enclude a bunch of tabular data.
+  - Camelot(https://github.com/camelot-dev/camelot) can extract tabular data in the form of DataFrame from the original raw data.
+  - We fed the RAG model with Natural Language explanation of Camelot-extracted DataFrame.
+- **Image Data Embedding**
+  - We fed the RAG model with zero-shot image-to-text inference of the Anthropic Claude 3.5 Sonnet(https://www.anthropic.com/news/claude-3-5-sonnet) API.
+  - We implemented a module that can show the context of QR code images.
 
 ----
 
