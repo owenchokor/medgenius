@@ -66,5 +66,6 @@ The diagram below shows our preprocessing scheme.
   - We fed the RAG model with zero-shot image-to-text inference of the Anthropic Claude 3.5 Sonnet(https://www.anthropic.com/news/claude-3-5-sonnet) API.
   - We implemented a module that can show the context of QR code images.
 
+
 ----
 
