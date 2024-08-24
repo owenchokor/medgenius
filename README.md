@@ -6,8 +6,20 @@
 
 We Leveraged RAG(Retrieval Augmentation Generation) technology to search and implement clinical guidelines for real use.
 
+# How to Use
+```bash
+python script.py --bucket_name snuh-data-team2 --pdf_source download --preprocess True
+```
+**arguments**
+- bucket_name : Your S3 bucket name.
+- pdf_source : You can either use your local pdf files(local) or files from the S3 bucket(download).
+- preprocess : We implemented tabular data and image preprocessing to feed in the RAG model. Pass --preprocess True to enable preprocessing, and False to use only plaintext.
+  
+The diagram below shows out preprocessing scheme.
+![Preprocessing Scheme](./logo/preprocessing_scheme.png)
+
 ## Target Users
-- **General Practitioners and Specialists at CHA Hospital**
+- **General Practitioners and Specialists at Primary Hospitals**
   - MEDGENIUS is designed primarily for general practitioners and specialists at Primary Hospitals.
 
 ## Key Features
@@ -47,15 +59,4 @@ pip install -r requirements.txt
 ```
 
 ----
-# How to Use
-```bash
-python script.py --bucket_name snuh-data-team2 --pdf_source download --preprocess True
-```
-**arguments**
-- bucket_name : Your S3 bucket name.
-- pdf_source : You can either use your local pdf files(local) or files from the S3 bucket(download).
-- preprocess : We implemented tabular data and image preprocessing to feed in the RAG model. Pass --preprocess True to enable preprocessing, and False to use only plaintext.
-  
-The diagram below shows out preprocessing scheme.
-![Preprocessing Scheme](./logo/preprocessing_scheme.png)
 
