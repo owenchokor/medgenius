@@ -67,5 +67,6 @@ The diagram below shows our preprocessing scheme.
   - A slight prompt engineering is used for the query. We prepared some prompts - in the form of a .yaml file - to feed the Claude API in a specific way we want.
   - We implemented a module that can show the context of QR code images.
 
+
 ----
 
