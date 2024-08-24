@@ -1,4 +1,4 @@
-# MEDGENIUS: Target Users and Expected Benefits
+# HACKATHON TEAM 2 : MEDGENIUS
 
 ![MEDGENIUS Explanation](MEdGenius.png)
 
