@@ -1,0 +1,8 @@
+langchain==0.2.13
+langchain-community==0.2.12
+langchain-aws==0.1.16
+pandas==2.2.2
+boto3==1.34.158
+camelot-py==0.9.0
+PyMuPDF==1.24.9
+pillow==10.3.0
