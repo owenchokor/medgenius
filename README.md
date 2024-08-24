@@ -1,6 +1,6 @@
-# HACKATHON TEAM 2 : MEDGENIUS
+# MEDGENIUS (Hackathon team 2)
 
-![MEDGENIUS Explanation](MEdGenius.png)
+![MEDGENIUS Explanation](./logo/MEdGenius.png)
 
 We Leveraged RAG(Retrieval Augmentation Generation) technology to search and implement clinical guidelines for real use.
 

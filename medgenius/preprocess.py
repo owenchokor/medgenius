@@ -1,9 +1,9 @@
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_aws import BedrockEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain.indexes import VectorstoreIndexCreator
-from extract_tables_and_images import extract_images, extract_tables
+from medgenius.extract_tables_and_images import extract_images, extract_tables
 from tqdm import tqdm
 
 class PDFProcessor():

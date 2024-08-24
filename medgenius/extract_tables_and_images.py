@@ -11,6 +11,7 @@ import os
 import glob
 import yaml
 
+os.environ["PATH"] += os.pathsep + os.path.abspath('./util/gs10031w64.exe')
 # AWS Bedrock client setup
 runtime = boto3.client("bedrock-runtime", "us-west-2")
 
@@ -59,18 +60,22 @@ def extract_images(pdf_path, page_number):
     return result
 
 
-def _load_prompts(file_path='prompts.yaml'):
+def _load_prompts(file_path='./medgenius/prompts.yaml'):
     with open(file_path, 'r') as file:
         prompts = yaml.safe_load(file)
     return prompts
 
 def _analyze_image(image_pil, query_type):
-    buffered = BytesIO()
-    image_pil.save(buffered, format="PNG")
-    image_bytes = buffered.getvalue()
+    try:
+        buffered = BytesIO()
+        image_pil.save(buffered, format="PNG")
+        image_bytes = buffered.getvalue()
 
-    # 이미지 base64로 인코딩
-    encoded_image = base64.b64encode(image_bytes).decode("utf-8")
+        # 이미지 base64로 인코딩
+        encoded_image = base64.b64encode(image_bytes).decode("utf-8")
+    except Exception as e:
+        print(f'passing image because of {e}')
+        return ''
 
     # 요청 바디 생성
     body = json.dumps(

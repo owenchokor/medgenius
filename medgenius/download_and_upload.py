@@ -9,7 +9,7 @@ from langchain_aws.embeddings import BedrockEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.docstore.document import Document
-from preprocess import PDFProcessor
+from medgenius.preprocess import PDFProcessor
 
 # S3에서 PDF 파일을 다운로드하는 함수
 def download_pdfs_from_s3(bucket_name, prefix, download_path='/tmp/pdfs'):
@@ -135,20 +135,3 @@ def create_and_save_bedrock_index(pdf_paths, bucket_name, preprocess = True, vec
     
     print(f"Vector DB files uploaded to s3://{bucket_name}/{vector_db_s3_path}")
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Process some integers.")
-    parser.add_argument('--bucket_name', type=str, default='snuh-data-team2', help='Name of the S3 bucket')
-    parser.add_argument('--pdf_source', type=str, choices=['local', 'download'], default='local', help='Source of the PDFs')
-    parser.add_argument('--preprocess', type=bool, default=False, help='Flag to determine if preprocessing should be done (True or False)')
-
-    args = parser.parse_args()
-
-    if args.pdf_source == 'local':
-        pdf_paths = copy_pdfs_from_local('', './data')
-    elif args.pdf_source == 'download':
-        pdf_paths = download_pdfs_from_s3(args.bucket_name, 'data/')
-
-    print("S3 -> Backend Transport Done.")
-    
-    # 벡터 DB 생성 및 S3에 저장
-    create_and_save_bedrock_index(pdf_paths, args.bucket_name, preprocess=args.preprocess)
