@@ -1,4 +1,6 @@
-# MEDGENIUS (Hackathon team 2)
+# **MEDGENIUS** : Feed Gigabytes OF Clinical Guidelines For Accurate Medical Practice
+
+### - by SNUH Hackathon team 2
 
 ![MEDGENIUS Explanation](./logo/MEdGenius.png)
 
@@ -19,3 +21,35 @@ We Leveraged RAG(Retrieval Augmentation Generation) technology to search and imp
   - Saves time while enhancing the accuracy of diagnosis and treatment.
 - **Patient-Centered Care**
   - Allows for personalized care tailored to each patient's specific needs, rather than standardized, one-size-fits-all treatments.
+
+-----
+# How to Set Up
+
+## 1. Create a Conda Virtual Environment
+
+```bash
+conda create -n my_env python=3.12
+```
+
+## 2. Activate the Virtual Environment
+```bash
+conda activate my_env
+```
+
+## 3. Clone the Git Repository
+```bash
+git clone https://github.com/owenchokor/medgenius.git
+cd medgenius
+```
+## 4. Download Requirements
+```bash
+pip install -r requirements.txt
+```
+
+----
+# How to Use
+```bash
+python script.py --bucket_name snuh-data-team2 --pdf_source download --preprocess True
+```
+
+
