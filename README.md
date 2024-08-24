@@ -51,5 +51,10 @@ pip install -r requirements.txt
 ```bash
 python script.py --bucket_name snuh-data-team2 --pdf_source download --preprocess True
 ```
-
-
+**arguments**
+- bucket_name : Your S3 bucket name.
+- pdf_source : You can either use your local pdf files(local) or files from the S3 bucket(download).
+- preprocess : We implemented tabular data and image preprocessing to feed in the RAG model. Pass --preprocess True to enable preprocessing, and False to use only plaintext.
+  
+The diagram below shows out preprocessing scheme.
+(./logo/preprocessing_scheme.png)
