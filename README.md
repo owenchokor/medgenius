@@ -57,4 +57,5 @@ python script.py --bucket_name snuh-data-team2 --pdf_source download --preproces
 - preprocess : We implemented tabular data and image preprocessing to feed in the RAG model. Pass --preprocess True to enable preprocessing, and False to use only plaintext.
   
 The diagram below shows out preprocessing scheme.
-(./logo/preprocessing_scheme.png)
+![Preprocessing Scheme](./logo/preprocessing_scheme.png)
+
