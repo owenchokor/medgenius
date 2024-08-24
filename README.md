@@ -1,4 +1,4 @@
-# **MEDGENIUS** : Feed Gigabytes OF Clinical Guidelines For Accurate Medical Practice
+# **MEDGENIUS** : Feed Gigabytes of Clinical Guidelines for Accurate Medical Practice
 
 ### - by SNUH Hackathon team 2
 
